@@ -10,7 +10,8 @@ class Pages extends BaseController
         $data = [
             "title" => "Home"
         ];
-
-        return view('pages/index', $data);
+        echo view('layout/header', $data);
+        echo view('pages/index');
+        echo view('layout/footer');
     }
 }
