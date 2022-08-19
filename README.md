@@ -63,8 +63,10 @@ Additionally, make sure that the following extensions are enabled in your PHP:
 - xml (enabled by default - don't turn it off)
 
 =========================================================
+
 Start to create project with Codeigniter
 - Install php/xampp in your computer
 - Install git, composer
 - Open the folder htdocs in xampp and open gitbash
 - Install codeigniter using composer and see the steps in the official website
+- Run the codeigniter with syntaks "php spark serve" in the codeigniter path with using gitbash, and then open the codeiginter URL in the browser
