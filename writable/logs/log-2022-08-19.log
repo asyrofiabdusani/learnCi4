@@ -1,0 +1,28 @@
+CRITICAL - 2022-08-19 01:15:20 --> Too few arguments to function App\Controllers\TestController::test(), 0 passed in C:\xampp\htdocs\learnCi4\vendor\codeigniter4\framework\system\CodeIgniter.php on line 904 and exactly 1 expected
+in APPPATH\Controllers\TestController.php on line 7.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\TestController->test()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestController))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-19 01:17:24 --> Too few arguments to function App\Controllers\TestController::test(), 0 passed in C:\xampp\htdocs\learnCi4\vendor\codeigniter4\framework\system\CodeIgniter.php on line 904 and exactly 1 expected
+in APPPATH\Controllers\TestController.php on line 7.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\TestController->test()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestController))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-19 01:17:26 --> Too few arguments to function App\Controllers\TestController::test(), 0 passed in C:\xampp\htdocs\learnCi4\vendor\codeigniter4\framework\system\CodeIgniter.php on line 904 and exactly 1 expected
+in APPPATH\Controllers\TestController.php on line 7.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\TestController->test()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestController))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-19 09:36:09 --> Too few arguments to function App\Controllers\TestController::index(), 0 passed in C:\xampp\htdocs\learnCi4\vendor\codeigniter4\framework\system\CodeIgniter.php on line 904 and exactly 1 expected
+in APPPATH\Controllers\TestController.php on line 7.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\TestController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestController))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
