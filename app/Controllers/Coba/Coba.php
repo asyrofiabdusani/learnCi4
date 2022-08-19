@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Controllers\Coba;
+
+use App\Controllers\BaseController;
 
 class Coba extends BaseController
 {
