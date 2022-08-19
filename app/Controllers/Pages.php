@@ -4,7 +4,6 @@ namespace App\Controllers;
 
 class Pages extends BaseController
 {
-
     public function index()
     {
         $data = [
@@ -12,6 +11,15 @@ class Pages extends BaseController
         ];
         echo view('layout/header', $data);
         echo view('pages/index');
+        echo view('layout/footer');
+    }
+    public function about()
+    {
+        $data = [
+            "title" => "About"
+        ];
+        echo view('layout/header', $data);
+        echo view('pages/about');
         echo view('layout/footer');
     }
 }
