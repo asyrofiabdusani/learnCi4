@@ -6,6 +6,6 @@ class Coba extends BaseController
 {
     public function index()
     {
-        return view('coba');
+        return view('CobaView/coba');
     }
 }
