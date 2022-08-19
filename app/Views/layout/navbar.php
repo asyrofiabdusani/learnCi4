@@ -13,6 +13,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="\pages\about">About</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="\pages\list_buku">Daftar Buku</a>
+                </li>
             </ul>
         </div>
     </div>

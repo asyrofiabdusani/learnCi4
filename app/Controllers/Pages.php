@@ -18,4 +18,11 @@ class Pages extends BaseController
         ];
         echo view('pages/about', $data);
     }
+    public function list_buku()
+    {
+        $data = [
+            "title" => "Daftar Buku"
+        ];
+        echo view('pages/list_buku', $data);
+    }
 }
