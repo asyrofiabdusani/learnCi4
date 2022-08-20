@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Models\ModelBuku;
+
 class Pages extends BaseController
 {
     public function index()
@@ -23,6 +25,10 @@ class Pages extends BaseController
         $data = [
             "title" => "Daftar Buku"
         ];
+
+        $modelBuku = new ModelBuku;
+        $listBuku = $modelBuku->findAll();
+        dd($listBuku);
         echo view('pages/list_buku', $data);
     }
 }
