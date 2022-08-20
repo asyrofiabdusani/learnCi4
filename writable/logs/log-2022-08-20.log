@@ -1,0 +1,83 @@
+CRITICAL - 2022-08-20 00:06:26 --> view(): Argument #2 ($data) must be of type array, string given, called in C:\xampp\htdocs\learnCi4\app\Controllers\Pages.php on line 45
+in SYSTEMPATH\Common.php on line 1123.
+ 1 APPPATH\Controllers\Pages.php(45): view('pages/detail_buku', 'akutansi_pengantar_1')
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Pages->detail_buku('akutansi_pengantar_1')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-20 00:06:32 --> view(): Argument #2 ($data) must be of type array, string given, called in C:\xampp\htdocs\learnCi4\app\Controllers\Pages.php on line 45
+in SYSTEMPATH\Common.php on line 1123.
+ 1 APPPATH\Controllers\Pages.php(45): view('pages/detail_buku', 'akutansi_pengantar_1')
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Pages->detail_buku('akutansi_pengantar_1')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-20 00:18:29 --> Undefined variable $detailBuku
+in APPPATH\Views\pages\detail_buku.php on line 5.
+ 1 APPPATH\Views\pages\detail_buku.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $detailBuku', 'APPPATH\\Views\\pages\\detail_buku.php', 5)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\detail_buku.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('pages/detail_buku', [], true)
+ 5 APPPATH\Controllers\Pages.php(50): view('pages/detail_buku', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Pages->detail_buku('akutansi_pengantar_1')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-20 00:19:50 --> Too few arguments to function App\Controllers\Pages::detail_buku(), 0 passed in C:\xampp\htdocs\learnCi4\vendor\codeigniter4\framework\system\CodeIgniter.php on line 904 and exactly 1 expected
+in APPPATH\Controllers\Pages.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Pages->detail_buku()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-20 00:23:28 --> Undefined variable $detailBuku
+in APPPATH\Views\pages\detail_buku.php on line 5.
+ 1 APPPATH\Views\pages\detail_buku.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $detailBuku', 'APPPATH\\Views\\pages\\detail_buku.php', 5)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\detail_buku.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('pages/detail_buku', [], true)
+ 5 APPPATH\Controllers\Pages.php(50): view('pages/detail_buku', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Pages->detail_buku('akutansi_pengantar_1')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-20 00:26:54 --> Array to string conversion
+in APPPATH\Views\pages\detail_buku.php on line 8.
+ 1 APPPATH\Views\pages\detail_buku.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\pages\\detail_buku.php', 8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\detail_buku.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('pages/detail_buku', [], true)
+ 5 APPPATH\Controllers\Pages.php(50): view('pages/detail_buku', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Pages->detail_buku('akutansi_pengantar_1')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-20 00:27:08 --> Undefined array key "sampul"
+in APPPATH\Views\pages\detail_buku.php on line 8.
+ 1 APPPATH\Views\pages\detail_buku.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sampul"', 'APPPATH\\Views\\pages\\detail_buku.php', 8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\detail_buku.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('pages/detail_buku', [], true)
+ 5 APPPATH\Controllers\Pages.php(50): view('pages/detail_buku', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Pages->detail_buku('akutansi_pengantar_1')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-20 00:27:35 --> Array to string conversion
+in APPPATH\Views\pages\detail_buku.php on line 8.
+ 1 APPPATH\Views\pages\detail_buku.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\pages\\detail_buku.php', 8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\detail_buku.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('pages/detail_buku', [], true)
+ 5 APPPATH\Controllers\Pages.php(50): view('pages/detail_buku', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Pages->detail_buku('akutansi_pengantar_1')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
