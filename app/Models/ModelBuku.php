@@ -12,4 +12,6 @@ class ModelBuku extends Model
     protected $useAutoIncrement = true;
 
     protected $returnType     = 'array';
+
+    protected $allowedFields = ['judul_buku', 'slug_buku', 'pengarang', 'penerbit', 'tahun_terbit', 'sampul'];
 }

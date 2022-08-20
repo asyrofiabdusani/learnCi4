@@ -1,8 +1,16 @@
+<?= $i = 1; ?>
 <?= $this->extend('layout/template'); ?>
 
 <?= $this->section('content'); ?>
 
 <h3 class="my-3">List Buku</h3>
+<a href="/pages/form_tambah"><button type="button" class="btn btn-primary mb-3">Tambah Data</button></a>
+<?php if (session()->getFlashdata('message')) : ?>
+<div class="alert alert-success" role="alert">
+    <?= session()->getFlashdata('message'); ?>
+</div>
+<?php endif; ?>
+
 <table class="table table-striped">
     <thead>
         <tr>
@@ -13,7 +21,6 @@
         </tr>
     </thead>
     <tbody>
-        <?= $i = 1; ?>
         <?php foreach ($list_buku as $buku) : ?>
         <tr>
             <th scope="row"><?= $i++; ?></th>

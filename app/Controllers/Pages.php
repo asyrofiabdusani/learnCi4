@@ -49,4 +49,29 @@ class Pages extends BaseController
         ];
         echo view('pages/detail_buku', $data);
     }
+
+    public function form_tambah()
+    {
+        $data = [
+            "title" => "Tambah Data",
+        ];
+        echo view('pages/form_tambah', $data);
+    }
+
+    public function save()
+    {
+        $input = $this->request->getVar();
+        $slug = url_title($input["judul"], '_', true);
+        $this->modelBuku->save([
+            'judul_buku' => $input["judul"],
+            'slug_judul' => $slug,
+            'pengarang' => $input["pengarang"],
+            'penerbit' => $input["penerbit"],
+            'tahun_terbit' => $input["tahun-terbit"],
+            'sampul' => $input["sampul"]
+        ]);
+        session()->setFlashdata('message', 'Data berhasil ditambahkan');
+
+        return redirect()->to('/pages/list_buku');
+    }
 }
