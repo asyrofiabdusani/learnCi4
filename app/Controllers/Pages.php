@@ -93,4 +93,10 @@ class Pages extends BaseController
 
         return redirect()->to('/pages/list_buku');
     }
+
+    public function delete($id)
+    {
+        $this->modelBuku->delete($id);
+        return redirect()->to('/pages/list_buku');
+    }
 }
