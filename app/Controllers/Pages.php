@@ -52,8 +52,10 @@ class Pages extends BaseController
 
     public function form_tambah()
     {
+        session();
         $data = [
             "title" => "Tambah Data",
+            "validation" => \config\Services::validation()
         ];
         echo view('pages/form_tambah', $data);
     }
@@ -64,8 +66,7 @@ class Pages extends BaseController
             'judul_buku' => 'required|is_unique[daftar_buku.judulbuku]'
         ])) {
             $validation = \config\Services::validation();
-            dd($validation);
-            return redirect()->to('pages/form_tambah');
+            return redirect()->to('pages/form_tambah')->withInput()->with('validation', $validation);
         }
 
         $input = $this->request->getVar();

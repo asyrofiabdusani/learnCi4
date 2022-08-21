@@ -8,7 +8,11 @@
     <div class="row mb-3">
         <label for="judul" class="col-sm-2 col-form-label">Judul Buku</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" id="judul" name="judul">
+            <input type="text" class="form-control <?= ($validation->hasError('judul_buku')) ? 'is-invalid' : ''; ?>"
+                id="judul" name="judul">
+            <div id="validationServer03Feedback" class="invalid-feedback">
+                <?= $validation->getError('judul_buku'); ?>
+            </div>
         </div>
     </div>
     <div class="row mb-3">
