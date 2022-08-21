@@ -60,6 +60,14 @@ class Pages extends BaseController
 
     public function save()
     {
+        if (!$this->validate([
+            'judul_buku' => 'required|is_unique[daftar_buku.judulbuku]'
+        ])) {
+            $validation = \config\Services::validation();
+            dd($validation);
+            return redirect()->to('pages/form_tambah');
+        }
+
         $input = $this->request->getVar();
         $slug = url_title($input["judul"], '_', true);
         $this->modelBuku->save([
