@@ -63,7 +63,16 @@ class Pages extends BaseController
     public function save()
     {
         if (!$this->validate([
-            'judul_buku' => 'required|is_unique[daftar_buku.judulbuku]'
+            'judul' => [
+                'rules' => [
+                    'required',
+                    'is_unique[daftar_buku.judul_buku]'
+                ],
+                'errors' => [
+                    'required' => '{field} harus diisi',
+                    'is_unique' => 'judul buku yang diinput sudah tersedia'
+                ]
+            ]
         ])) {
             $validation = \config\Services::validation();
             return redirect()->to('pages/form_tambah')->withInput()->with('validation', $validation);
