@@ -80,6 +80,7 @@ class Pages extends BaseController
 
         $input = $this->request->getVar();
         $slug = url_title($input["judul"], '_', true);
+        // dd($slug);
         $this->modelBuku->save([
             'judul_buku' => $input["judul"],
             'slug_judul' => $slug,

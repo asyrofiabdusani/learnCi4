@@ -13,5 +13,5 @@ class ModelBuku extends Model
 
     protected $returnType     = 'array';
 
-    protected $allowedFields = ['judul_buku', 'slug_buku', 'pengarang', 'penerbit', 'tahun_terbit', 'sampul'];
+    protected $allowedFields = ['judul_buku', 'slug_judul', 'pengarang', 'penerbit', 'tahun_terbit', 'sampul'];
 }
