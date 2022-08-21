@@ -17,9 +17,11 @@
                 <p class="card-text"><small class="text-muted"><?= $detailBuku[0]["tahun_terbit"]; ?></small></p>
                 <div class="mb-3">
                     <button type="button" class="btn btn-warning">Edit</button>
-                    <a href="\pages\delete\<?= $detailBuku[0]["id_buku"]; ?>">
-                        <button type="button" class="btn btn-danger">Delete</button>
-                    </a>
+                    <form action="/pages/<?= $detailBuku[0]["id_buku"]; ?>" method="POST" class="d-inline">
+                        <input type="hidden" value="DELETE" name="_method">
+                        <button type="submit" class="btn btn-danger"
+                            onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</button>
+                    </form>
                 </div>
                 <a href="\pages\list_buku" class="card-link">Lihat daftar buku
                     lainnya</a>

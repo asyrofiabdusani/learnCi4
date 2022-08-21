@@ -22,3 +22,38 @@ in APPPATH\Views\pages\detail_buku.php on line 10.
  8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-21 10:37:19 --> syntax error, unexpected identifier "session", expecting "function" or "const"
+in APPPATH\Controllers\BaseController.php on line 53.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\BaseController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\BaseController')
+ 3 APPPATH\Controllers\Pages.php(7): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\BaseController')
+ 4 SYSTEMPATH\Router\AutoRouter.php(147): include_once('APPPATH\\Controllers\\Pages.php')
+ 5 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('pages/list_buku')
+ 6 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('pages/list_buku')
+ 7 SYSTEMPATH\CodeIgniter.php(779): CodeIgniter\Router\Router->handle('pages/list_buku')
+ 8 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-21 10:46:53 --> Unsupported operand types: string | null
+in APPPATH\Views\pages\list_buku.php on line 9.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('pages/list_buku', [], true)
+ 4 APPPATH\Controllers\Pages.php(40): view('pages/list_buku', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Pages->list_buku()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-21 10:48:40 --> Unsupported operand types: string | null
+in APPPATH\Views\pages\list_buku.php on line 9.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('pages/list_buku', [], true)
+ 4 APPPATH\Controllers\Pages.php(40): view('pages/list_buku', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Pages->list_buku()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

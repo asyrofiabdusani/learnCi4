@@ -5,9 +5,10 @@
 
 <h3 class="my-3">List Buku</h3>
 <a href="/pages/form_tambah"><button type="button" class="btn btn-primary mb-3">Tambah Data</button></a>
-<?php if (session()->getFlashdata('message')) : ?>
-<div class="alert alert-success" role="alert">
-    <?= session()->getFlashdata('message'); ?>
+
+<?php if (session()->getFlashdata('message') || session()->getFlashdata('delete')) : ?>
+<div class="alert <?= (session()->getFlashdata('message') ? "alert-success" : "alert-danger"); ?>" role="alert">
+    <?= (session()->getFlashdata('message') ? session()->getFlashdata('message') : session()->getFlashdata('delete')); ?>
 </div>
 <?php endif; ?>
 

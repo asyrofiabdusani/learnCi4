@@ -37,6 +37,7 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/coba', 'Pages::index');
+$routes->delete('/pages/(:num)', 'Pages::delete/$1');
 $routes->get('/pages/detail_buku/(:any)', 'Pages::detail_buku/$1');
 
 /*

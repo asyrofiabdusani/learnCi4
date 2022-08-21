@@ -52,7 +52,7 @@ class Pages extends BaseController
 
     public function form_tambah()
     {
-        session();
+        // session();
         $data = [
             "title" => "Tambah Data",
             "validation" => \config\Services::validation()
@@ -97,6 +97,8 @@ class Pages extends BaseController
     public function delete($id)
     {
         $this->modelBuku->delete($id);
+
+        session()->setFlashdata('delete', 'Data berhasil dihapus');
         return redirect()->to('/pages/list_buku');
     }
 }
