@@ -73,9 +73,29 @@ class Pages extends BaseController
                 ]
             ]
         ])) {
-            $validation = \config\Services::validation();
-            return redirect()->to('pages/form_tambah')->withInput()->with('validation', $validation);
+            return redirect()->to('pages/form_tambah')->withInput();
         }
+
+        if (!$this->validate([
+            'sampul' => [
+                'rules' => [
+                    'uploaded[sampul]',
+                    // 'max_size[sampul,2048]',
+                    // 'mime_in[sampul,image/png,image/jpg]',
+                    // 'ext_in[sampul,png,jpg,gif]',
+                    // 'is_image[sampul]'
+                ],
+                'errors' => [
+                    'uploaded' => 'Error upload file'
+                ]
+            ]
+        ])) {
+            return redirect()->to('pages/form_tambah')->withInput();
+        }
+        $nameImg = $this->request->getFile('sampul')->getRandomName();
+        $this->request->getFile('sampul')->move('img', $nameImg);
+
+        // dd($this->request->getFile('sampul'));
 
         $input = $this->request->getVar();
         $slug = url_title($input["judul"], '_', true);
@@ -86,7 +106,7 @@ class Pages extends BaseController
             'pengarang' => $input["pengarang"],
             'penerbit' => $input["penerbit"],
             'tahun_terbit' => $input["tahun-terbit"],
-            'sampul' => $input["sampul"]
+            'sampul' => $nameImg
         ]);
         session()->setFlashdata('message', 'Data berhasil ditambahkan');
 

@@ -4,7 +4,7 @@
 
 <h3 class="my-3">Tambah Data</h3>
 
-<form action="\pages\save" method="post">
+<form action="\pages\save" method="post" enctype="multipart/form-data">
     <div class="row mb-3">
         <label for="judul" class="col-sm-2 col-form-label">Judul Buku</label>
         <div class="col-sm-10">
@@ -37,7 +37,7 @@
     <div class="row mb-3">
         <label for="sampul" class="col-sm-2 col-form-label">Sampul Buku</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" id="sampul" name="sampul" value="<?= old('sampul'); ?>">
+            <input type="file" class="form-control" id="sampul" name="sampul" value="<?= old('sampul'); ?>">
         </div>
     </div>
     <button type="submit" class="btn btn-primary mt-3">Submit Data</button>

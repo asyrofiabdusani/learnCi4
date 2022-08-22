@@ -1,0 +1,60 @@
+CRITICAL - 2022-08-22 08:22:09 --> Too few arguments to function CodeIgniter\HTTP\IncomingRequest::getFile(), 0 passed in C:\xampp\htdocs\learnCi4\app\Controllers\Pages.php on line 64 and exactly 1 expected
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 744.
+ 1 APPPATH\Controllers\Pages.php(64): CodeIgniter\HTTP\IncomingRequest->getFile()
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Pages->save()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-22 08:32:04 --> CodeIgniter\Validation\FileRules::uploaded(): Argument #2 ($name) must be of type string, null given, called in C:\xampp\htdocs\learnCi4\vendor\codeigniter4\framework\system\Validation\Validation.php on line 307
+in SYSTEMPATH\Validation\FileRules.php on line 48.
+ 1 SYSTEMPATH\Validation\Validation.php(307): CodeIgniter\Validation\FileRules->uploaded(null, null)
+ 2 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('sampul', 'sampul', null, [...], [...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Pages.php(83): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Pages->save()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-22 08:32:23 --> CodeIgniter\Validation\FileRules::uploaded(): Argument #2 ($name) must be of type string, null given, called in C:\xampp\htdocs\learnCi4\vendor\codeigniter4\framework\system\Validation\Validation.php on line 307
+in SYSTEMPATH\Validation\FileRules.php on line 48.
+ 1 SYSTEMPATH\Validation\Validation.php(307): CodeIgniter\Validation\FileRules->uploaded(null, null)
+ 2 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('sampul', 'sampul', null, [...], [...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Pages.php(83): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Pages->save()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-22 08:33:47 --> CodeIgniter\Validation\FileRules::uploaded(): Argument #2 ($name) must be of type string, null given, called in C:\xampp\htdocs\learnCi4\vendor\codeigniter4\framework\system\Validation\Validation.php on line 307
+in SYSTEMPATH\Validation\FileRules.php on line 48.
+ 1 SYSTEMPATH\Validation\Validation.php(307): CodeIgniter\Validation\FileRules->uploaded(null, null)
+ 2 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('sampul', 'sampul', null, [...], [...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Pages.php(83): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Pages->save()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-22 08:34:10 --> CodeIgniter\Validation\FileRules::uploaded(): Argument #2 ($name) must be of type string, null given, called in C:\xampp\htdocs\learnCi4\vendor\codeigniter4\framework\system\Validation\Validation.php on line 307
+in SYSTEMPATH\Validation\FileRules.php on line 48.
+ 1 SYSTEMPATH\Validation\Validation.php(307): CodeIgniter\Validation\FileRules->uploaded(null, null)
+ 2 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('sampul', 'sampul', null, [...], [...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Pages.php(83): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Pages->save()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-22 08:34:57 --> Undefined array key "sampul"
+in APPPATH\Controllers\Pages.php on line 106.
+ 1 APPPATH\Controllers\Pages.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sampul"', 'APPPATH\\Controllers\\Pages.php', 106)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Pages->save()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
