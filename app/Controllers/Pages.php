@@ -52,7 +52,6 @@ class Pages extends BaseController
 
     public function form_tambah()
     {
-        // session();
         $data = [
             "title" => "Tambah Data",
             "validation" => \config\Services::validation()
@@ -99,6 +98,59 @@ class Pages extends BaseController
         $this->modelBuku->delete($id);
 
         session()->setFlashdata('delete', 'Data berhasil dihapus');
+        return redirect()->to('/pages/list_buku');
+    }
+
+    public function edit($slug)
+    {
+        $data = [
+            "title" => "Edit Data",
+            "data_buku" => $this->modelBuku->where('slug_judul', $slug)->findAll(),
+            "validation" => \config\Services::validation()
+        ];
+        echo view('pages/form_edit', $data);
+    }
+
+    public function update()
+    {
+        $input = $this->request->getVar();
+        $slug = url_title($input["judul"], '_', true);
+
+        if ($slug == $input["slug"]) {
+            $rules = ['required'];
+            $errors = [
+                'required' => '{field} harus diisi',
+            ];
+        } else {
+            $rules = ['required', 'is_unique[daftar_buku.judul_buku]'];
+            $errors = [
+                'required' => '{field} harus diisi',
+                'is_unique' => 'judul buku yang diinput sudah tersedia'
+            ];
+        }
+
+        if (!$this->validate([
+            'judul' => [
+                'rules' => $rules,
+                'errors' => $errors,
+            ]
+        ])) {
+            $validation = \config\Services::validation();
+            session()->setFlashdata('message', $validation->getError());
+            return redirect()->to("pages/edit/" . $input["slug"])->withInput()->with('validation', $validation);
+        }
+
+        $this->modelBuku->save([
+            'id_buku' => $input["id"],
+            'judul_buku' => $input["judul"],
+            'slug_judul' => $slug,
+            'pengarang' => $input["pengarang"],
+            'penerbit' => $input["penerbit"],
+            'tahun_terbit' => $input["tahun-terbit"],
+            'sampul' => $input["sampul"]
+        ]);
+        session()->setFlashdata('message', 'Data berhasil diubah');
+
         return redirect()->to('/pages/list_buku');
     }
 }

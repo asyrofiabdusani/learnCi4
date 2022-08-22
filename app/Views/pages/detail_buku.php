@@ -16,7 +16,9 @@
                 <p class="card-text m-0">Penerbit : <?= $detailBuku[0]["penerbit"]; ?></p>
                 <p class="card-text"><small class="text-muted"><?= $detailBuku[0]["tahun_terbit"]; ?></small></p>
                 <div class="mb-3">
-                    <button type="button" class="btn btn-warning">Edit</button>
+                    <a href="\pages\edit\<?= $detailBuku[0]["slug_judul"]; ?>" style="text-decoration: none;">
+                        <button type="button" class="btn btn-warning">Edit</button>
+                    </a>
                     <form action="/pages/<?= $detailBuku[0]["id_buku"]; ?>" method="POST" class="d-inline">
                         <input type="hidden" value="DELETE" name="_method">
                         <button type="submit" class="btn btn-danger"
