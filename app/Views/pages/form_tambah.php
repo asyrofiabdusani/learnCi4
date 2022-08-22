@@ -36,11 +36,25 @@
     </div>
     <div class="row mb-3">
         <label for="sampul" class="col-sm-2 col-form-label">Sampul Buku</label>
-        <div class="col-sm-10">
+        <img class="img-review col-sm-2 img-thumbnail border-0"></img>
+        <div class="col-sm-8">
             <input type="file" class="form-control" id="sampul" name="sampul" value="<?= old('sampul'); ?>">
         </div>
     </div>
     <button type="submit" class="btn btn-primary mt-3">Submit Data</button>
 </form>
 
+<script>
+const imgBox = document.querySelector('.img-review');
+const imgFile = document.querySelector('#sampul');
+imgFile.addEventListener('change', (event) => {
+    const fileList = event.target.files;
+    const reader = new FileReader();
+    console.log(reader.readAsDataURL(fileList[0]));
+
+    reader.onload = (e) => {
+        imgBox.src = e.target.result;
+    };
+});
+</script>
 <?= $this->endSection(); ?>

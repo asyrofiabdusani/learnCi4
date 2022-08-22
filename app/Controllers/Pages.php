@@ -95,8 +95,6 @@ class Pages extends BaseController
         $nameImg = $this->request->getFile('sampul')->getRandomName();
         $this->request->getFile('sampul')->move('img', $nameImg);
 
-        // dd($this->request->getFile('sampul'));
-
         $input = $this->request->getVar();
         $slug = url_title($input["judul"], '_', true);
         // dd($slug);
