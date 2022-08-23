@@ -1,0 +1,58 @@
+CRITICAL - 2022-08-23 10:23:44 --> require_once(vendor/autoload.php): Failed to open stream: No such file or directory
+in APPPATH\Controllers\Home.php on line 5.
+ 1 APPPATH\Controllers\Home.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require_once(vendor/autoload.php): Failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Home.php', 5)
+ 2 APPPATH\Controllers\Home.php(5): require_once()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(282): include_once('APPPATH\\Controllers\\Home.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Home.php')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 6 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 7 SYSTEMPATH\CodeIgniter.php(854): class_exists('\\App\\Controllers\\Home', true)
+ 8 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-23 10:36:47 --> Class name must be a valid object or a string
+in APPPATH\Controllers\Home.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-23 10:37:23 --> Class name must be a valid object or a string
+in APPPATH\Controllers\Home.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-23 10:38:28 --> Non-static method CodeIgniter\I18n\Time::toDateTime() cannot be called statically
+in APPPATH\Controllers\Home.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-23 10:41:04 --> CodeIgniter\I18n\Time::createFromInstance(): Argument #1 ($dateTime) must be of type DateTimeInterface, int given, called in C:\xampp\htdocs\learnCi4\app\Controllers\Home.php on line 13
+in SYSTEMPATH\I18n\Time.php on line 272.
+ 1 APPPATH\Controllers\Home.php(13): CodeIgniter\I18n\Time::createFromInstance(985421691)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-23 10:41:27 --> CodeIgniter\I18n\Time::createFromInstance(): Argument #1 ($dateTime) must be of type DateTimeInterface, int given, called in C:\xampp\htdocs\learnCi4\app\Controllers\Home.php on line 13
+in SYSTEMPATH\I18n\Time.php on line 272.
+ 1 APPPATH\Controllers\Home.php(13): CodeIgniter\I18n\Time::createFromInstance(72361371, 'en_US')
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-23 10:41:28 --> CodeIgniter\I18n\Time::createFromInstance(): Argument #1 ($dateTime) must be of type DateTimeInterface, int given, called in C:\xampp\htdocs\learnCi4\app\Controllers\Home.php on line 13
+in SYSTEMPATH\I18n\Time.php on line 272.
+ 1 APPPATH\Controllers\Home.php(13): CodeIgniter\I18n\Time::createFromInstance(1084742128, 'en_US')
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

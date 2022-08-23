@@ -3,20 +3,29 @@
 namespace App\Database\Seeds;
 
 use CodeIgniter\Database\Seeder;
+use CodeIgniter\I18n\Time;
 
-class SimpleSeeder extends Seeder
+class peopleSeeder extends Seeder
 {
     public function run()
     {
-        $data = [
-            'name' => 'Budi',
-            'alamat'    => 'Jakarta Timur',
-        ];
+        for ($i = 0; $i < 100; $i++) {
+            $faker = \Faker\Factory::create('id_ID');
 
-        // Simple Queries
-        $this->db->query('INSERT INTO users (username, email) VALUES(:username:, :email:)', $data);
+            $datetime = Time::createFromTimestamp($faker->unixTime($max = 'now'));
 
-        // Using Query Builder
-        $this->db->table('users')->insert($data);
+            $data = [
+                'name' => $faker->name,
+                'alamat'    => $faker->address,
+                'created_at' => $datetime,
+                'updated_at' => $datetime
+            ];
+
+            // Simple Queries
+            // $this->db->query('INSERT INTO users (username, email) VALUES(:username:, :email:)', $data);
+
+            // Using Query Builder
+            $this->db->table('people')->insert($data);
+        }
     }
 }
