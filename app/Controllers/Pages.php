@@ -113,7 +113,11 @@ class Pages extends BaseController
 
     public function delete($id)
     {
+        $file = $this->modelBuku->where('id_buku', $id)->findAll();
+        $nameImg = $file[0]["sampul"];
+
         $this->modelBuku->delete($id);
+        unlink('img/' . $nameImg);
 
         session()->setFlashdata('delete', 'Data berhasil dihapus');
         return redirect()->to('/pages/list_buku');
