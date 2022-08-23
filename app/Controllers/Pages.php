@@ -159,7 +159,37 @@ class Pages extends BaseController
         ])) {
             $validation = \config\Services::validation();
             session()->setFlashdata('message', $validation->getError());
-            return redirect()->to("pages/edit/" . $input["slug"])->withInput()->with('validation', $validation);
+            return redirect()->to("pages/edit/" . $input["slug"])->withInput();
+        }
+
+        if (!$this->validate([
+            'sampul' => [
+                'rules' => [
+                    'max_size[sampul,2048]',
+                    'mime_in[sampul,image/png,image/jpg]',
+                    'ext_in[sampul,png,jpg,gif]',
+                    'is_image[sampul]'
+                ],
+                'errors' => [
+                    'max_size' => 'Gambar yang diupload tidak sesuai',
+                    'mime_in' => 'Gambar yang diupload tidak sesuai',
+                    'ext_in' => 'Gambar yang diupload tidak sesuai',
+                    'is_image' => 'Gambar yang diupload tidak sesuai'
+                ]
+            ]
+        ])) {
+            $validation = \config\Services::validation();
+            // dd($validation->getError());
+            session()->setFlashdata('message', $validation->getError());
+            return redirect()->to("pages/edit/" . $input["slug"])->withInput();
+        }
+
+        if (!$this->request->getFile('sampul')->getSize()) {
+            $nameImg = $input["sampul"];
+        } else {
+            $nameImg = $this->request->getFile('sampul')->getRandomName();
+            $this->request->getFile('sampul')->move('img', $nameImg);
+            unlink('img/' . $input["sampul"]);
         }
 
         $this->modelBuku->save([
@@ -169,8 +199,9 @@ class Pages extends BaseController
             'pengarang' => $input["pengarang"],
             'penerbit' => $input["penerbit"],
             'tahun_terbit' => $input["tahun-terbit"],
-            'sampul' => $input["sampul"]
+            'sampul' => $nameImg
         ]);
+
         session()->setFlashdata('message', 'Data berhasil diubah');
 
         return redirect()->to('/pages/list_buku');

@@ -12,10 +12,10 @@
 </div>
 <?php endif; ?>
 
-
-<form action="\pages\update" method="post">
+<form action="\pages\update" method="post" enctype="multipart/form-data">
     <input type="hidden" name="id" value="<?= $data_buku[0]["id_buku"]; ?>">
     <input type="hidden" name="slug" value="<?= $data_buku[0]["slug_judul"]; ?>">
+    <input type="hidden" name="sampul" value="<?= $data_buku[0]["sampul"]; ?>">
     <div class="row mb-3">
         <label for="judul" class="col-sm-2 col-form-label">Judul Buku</label>
         <div class="col-sm-10">
@@ -46,12 +46,26 @@
     </div>
     <div class="row mb-3">
         <label for="sampul" class="col-sm-2 col-form-label">Sampul Buku</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="sampul" name="sampul"
-                value="<?= (old("sampul")) ? old("sampul") : $data_buku[0]["sampul"]; ?>">
+        <img class="img-review col-sm-2 img-thumbnail border-0" src="/img/<?= $data_buku[0]["sampul"]; ?>"></img>
+        <div class="col-sm-8">
+            <input type="file" class="form-control" id="sampul" name="sampul" value="<?= (old("sampul")); ?>">
         </div>
     </div>
     <button type="submit" class="btn btn-primary mt-3">Update Data</button>
 </form>
+
+<script>
+const imgBox = document.querySelector('.img-review');
+const imgFile = document.querySelector('#sampul');
+imgFile.addEventListener('change', (event) => {
+    const fileList = event.target.files;
+    const reader = new FileReader();
+    console.log(reader.readAsDataURL(fileList[0]));
+
+    reader.onload = (e) => {
+        imgBox.src = e.target.result;
+    };
+});
+</script>
 
 <?= $this->endSection(); ?>
