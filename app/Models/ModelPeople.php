@@ -14,4 +14,11 @@ class ModelPeople extends Model
     protected $returnType     = 'array';
 
     protected $allowedFields = ['name', 'alamat'];
+
+    public function search($keyword)
+    {
+        $builder = $this->table('table');
+        $builder->like('name', $keyword);
+        return $builder;
+    }
 }
