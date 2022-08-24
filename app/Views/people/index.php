@@ -25,6 +25,6 @@
     </tbody>
 </table>
 
-<?= $pager->links() ?>
+<?= $pager->links('', 'people_pagination') ?>
 
 <?= $this->endSection(); ?>
