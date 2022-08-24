@@ -17,7 +17,7 @@ class People extends BaseController
     {
         $listPerPage = 10;
         if ($this->request->getVar()) {
-            $page = (intval($this->request->getVar("page")) - 1);
+            $page = (intval($this->request->getVar("page_people")) - 1);
         } else {
             $page = 0;
         }
@@ -25,7 +25,7 @@ class People extends BaseController
 
         $data = [
             'title' => 'People Page',
-            'list_people' => $this->modelPeople->paginate($listPerPage),
+            'list_people' => $this->modelPeople->paginate($listPerPage, 'people'),
             'pager' => $this->modelPeople->pager,
             'page' => $page,
         ];
